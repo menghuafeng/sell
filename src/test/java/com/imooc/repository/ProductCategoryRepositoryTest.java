@@ -10,6 +10,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -38,4 +42,12 @@ public class ProductCategoryRepositoryTest {
         Assert.assertNotNull(result);
         //Assert.assertNotEquals(null,result);
     }
+
+    @Test
+    public void findByCategoryType(){
+        List<Integer> list= Arrays.asList(2,3,1);
+        List<ProductCategory> result=repository.findByCategoryTypeIn(list);
+        Assert.assertNotEquals(0,result.size());
+    }
+
 }

@@ -38,4 +38,7 @@ public class ProductCategory {
         this.categoryName = categoryName;
         this.categoryType = categoryType;
     }
+
+    public ProductCategory() {
+    }
 }
