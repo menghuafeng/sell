@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+server:
+  context-path : /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  #日志级别,默认为info,info之下的不打印
+#  level: debug
+#  #file表示文件的路径和文件的名字,path表示的文件的路径,名字默认为spring.log
+#  file: /var/log/sell.log
+#  #path : /var/log/tomcat
