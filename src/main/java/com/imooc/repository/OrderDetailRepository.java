@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * Created by 孟华锋
  * 2017/8/4.
@@ -12,4 +14,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface OrderDetailRepository extends JpaRepository<OrderDetail,String> {
 
     Page<OrderDetail> findByDetailId(String detailId, Pageable pageable);
+
+    List<OrderDetail> findByOrderId(String orderId);
 }

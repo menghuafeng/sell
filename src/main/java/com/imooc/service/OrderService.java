@@ -1,11 +1,11 @@
 package com.imooc.service;
 
 import com.imooc.dto.OrderDTO;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
-
 /**
+ * 订单各种功能
  * Created by 孟华锋
  * 2017/8/4.
  */
@@ -18,7 +18,7 @@ public interface OrderService {
     OrderDTO findOne(String orderId);
 
      /**查询订单列表. */
-    List<OrderDTO> findList(String buyerOpenid, Pageable pageable);
+    Page<OrderDTO> findList(String buyerOpenid, Pageable pageable);
 
      /**取消订单. */
     OrderDTO cancel(OrderDTO orderDTO);
