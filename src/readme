@@ -1,0 +1,12 @@
+
+1.OrderDTO注解:
+    @JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    其中第一个注解已经过期,第二个注解是新的,该注解表示的是当前类的对象的一个属性值为空的时候,
+    就不返回该属性
+    该注解仅仅作用到当前类,项目中含有很多的DTO,VO等,如果每个都添加,很麻烦
+      jackson:
+        default-property-inclusion: non_empty
+    使用全局配置
+    注 : 使用全局配置的时候,为空的时候就不返回,这个要根据具体情况来使用;
+        当需要返回的时候,不要使用该配置,可以在属性定义的地方进行初始化
